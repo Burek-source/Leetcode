@@ -12,7 +12,6 @@ Output: true
 Explanation: [5,7,23] are three consecutive odds.
 
 
-
 class Solution 
 {
     public boolean threeConsecutiveOdds(int[] arr) 
