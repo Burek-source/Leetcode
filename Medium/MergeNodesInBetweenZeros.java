@@ -50,12 +50,12 @@ class Solution
     public ListNode mergeNodes(ListNode head) 
     {
         int count = 0; // Counts 0's
-        int sumBeforeZero = 0; // Keeps track of sum before zero
+        int sumBeforeZero = 0; // Keeps track of the sum before zero
       
         ListNode result = null;
         ListNode current = null;
 
-        // Check the sums before the next zero
+        // Check the sum before the next zero
         while(head != null)
         {
             int n = head.val;
