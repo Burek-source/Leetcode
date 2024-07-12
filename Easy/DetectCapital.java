@@ -28,7 +28,7 @@ class Solution
 {
     public boolean detectCapitalUse(String word) 
     {
-        // A word of lenght 1 is always going to be written properly
+        // A word of length 1 is always going to be written properly
         if(word.length() == 1)
         {
             return true;
