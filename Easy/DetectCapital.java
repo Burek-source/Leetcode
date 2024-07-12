@@ -54,7 +54,7 @@ class Solution
                 return true;
             }
         }
-        // Case 2: If the first 2 letters of a word lowercase, all other letters in the word need to be lowercase
+        // Case 2: If the first 2 letters of a word are lowercase, all other letters in the word need to be lowercase
         else if(n1 > 91 && n2 > 91)
         {
             allUpperCase = false;
