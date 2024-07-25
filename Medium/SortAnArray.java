@@ -57,8 +57,7 @@ class Solution
         mergeSort(leftHalf);
         mergeSort(rightHalf);
 
-        merge(arr, leftHalf, rightHalf);
-            
+        merge(arr, leftHalf, rightHalf);           
     }
 
     // Sort the left half first, then the right half then sort both halves together
