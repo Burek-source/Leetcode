@@ -5,7 +5,6 @@ Given an array of strings arr, and an integer k, return the kth distinct string 
 Note that the strings are considered in the order in which they appear in the array.
 
  
-
 Example 1:
 
 Input: arr = ["d","b","c","b","c","a"], k = 2
