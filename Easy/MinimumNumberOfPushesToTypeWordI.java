@@ -58,44 +58,24 @@ class Solution
 {
     public int minimumPushes(String word) 
     {
-        int index = 0;
-        int minNumberOfPushes = 0;
-        int pushes = 0;
-        int product = 1;
+       // After every eight characters, the number of seconds to type the given character increases by 1. Start condition is one second per one character. Max number of seconds is 4 per character.
 
-        Map<Character, Integer> map = new HashMap<>();
-        
-        // Map each char in the word with its frequency
-        for(int i = 0; i < word.length(); i++)
+        // If 1-8
+        if(word.length() < 9)
         {
-            map.merge(word.charAt(i), 1, Integer::sum);
+            return word.length();
         }
-
-        int[] arr = new int[map.size()];
-
-        // Extract all values from the hashmap into an array
-        for(char key : map.keySet())
+        // If 9 - 16
+        else if(word.length() > 8 && word.length() <17)
         {
-           arr[index] = map.get(key);
-           index++;
+            return 8 + (word.length() - 8) * 2;
         }
-
-        Arrays.sort(arr); // Sort the values in ascending order
-         
-        // Find the minimum number of pushes to type a word
-        for(int i = arr.length - 1; i > -1; i--)
+        // If 17 - 24
+        else if(word.length() > 16 && word.length() < 25)
         {
-            pushes++;
-
-            minNumberOfPushes = minNumberOfPushes + (arr[i] * product);
-
-            // After every 8th char, the number of pushes for the next 8 chars increases by 1
-            if(pushes == 8)
-            {
-                product++;
-                pushes = 0;
-            }
-        }
-        return minNumberOfPushes;
+            return 24 + (word.length() - 16) * 3;
+        }  
+        // If 25 - 26
+        return 48 + (word.length() - 24) * 4;
     }
 }
